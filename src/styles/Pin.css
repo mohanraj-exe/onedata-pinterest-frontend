@@ -13,6 +13,7 @@
     max-width: 100%;
     display: block;
     border-radius: 2em;
+    min-height: 100%;
 }
 
 .pin-info{
@@ -23,16 +24,28 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1em 0;
 }
 
-.pin-info #follow-btn{
+.pin-info #follow-btn, #comment-btn {
     padding: 1em;
     color: black;
     border: 1px solid #ebebeb;
     border-radius: 2em;
+    background-color: bisque;
 }
 
-.following-btn{
-    background-color: black;
-    color: #fff;
+.comments-input{
+    border: 1px solid black;
+    padding: 0.25em 0;
+    margin: 0 0 0.5em;
+}
+
+.comments{
+    padding: 1em;
+    border: 1px solid black;
+}
+
+.comments ul li{
+    list-style: none;
 }

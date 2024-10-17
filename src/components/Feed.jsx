@@ -1,24 +1,39 @@
+import { useNavigate } from "react-router-dom";
 import "../styles/Feed.css";
+import { useEffect, useState } from "react";
 
 function Feed() {
+
+    const [pin, setPin] = useState([]);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('http://localhost:3000/api/pin_all');
+                const result = await response.json();
+                // console.log(result.data);
+                setPin(result.data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+        fetchData();
+    }, []);
+
     return (
         <>
-            <section className="feed">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt id quasi tempore culpa. Eum assumenda hic quam nulla aliquam, facilis dignissimos molestiae cum illum asperiores reprehenderit! Dolore fuga maiores dolorum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, officiis. Assumenda in maxime deserunt itaque pariatur beatae accusamus explicabo atque quod eligendi earum aliquid molestiae laborum, hic temporibus nostrum? Neque?</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, animi aut facere non nisi quam, molestiae quae id dolorum hic praesentium quisquam magnam in qui ad ipsam aliquam architecto at!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nemo repudiandae unde animi molestias adipisci facere doloribus eveniet eaque cupiditate quo, ipsum, illo, at quas id sint totam nostrum recusandae?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore. laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore.</p>
-
-            </section>
+            {pin.length > 0 ? (
+                <section className="feed">
+                    {pin.map(item => (
+                        <article key={item._id} onClick={() => navigate(`/pin/${item._id}`)}>
+                            <img src={item.img} alt="pin-image" />
+                        </article>
+                    ))}
+                </section>
+            ) : (
+                <p>Loading...</p>
+            )}
         </>
     )
 }

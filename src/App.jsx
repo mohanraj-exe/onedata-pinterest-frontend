@@ -8,7 +8,7 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Homepage />} />
-        <Route path='/pin' element={<Pinpage />} />
+        <Route path='/pin/:id' element={<Pinpage />} />
       </Routes>
     </>
   )
