@@ -1,0 +1,38 @@
+.pin{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* background-color: beige; */
+    border-radius: 2em;
+    max-width: 1000px;
+    width: 85%;
+    margin: 1em auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.pin img{
+    max-width: 100%;
+    display: block;
+    border-radius: 2em;
+}
+
+.pin-info{
+    padding: 2em;
+}
+
+.pin-info .follow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pin-info #follow-btn{
+    padding: 1em;
+    color: black;
+    border: 1px solid #ebebeb;
+    border-radius: 2em;
+}
+
+.following-btn{
+    background-color: black;
+    color: #fff;
+}

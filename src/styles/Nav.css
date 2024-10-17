@@ -1,0 +1,19 @@
+.nav {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav input{
+    flex-grow: 1;
+    /* height: 1em; */
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 0.5em;
+}
+
+.nav span{
+    margin: 0 1.25em;
+    cursor: pointer;
+}

@@ -1,0 +1,10 @@
+.feed{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1em;
+}
+
+.feed p{
+    border: 1px solid #626262;
+    border-radius: 1em;
+}

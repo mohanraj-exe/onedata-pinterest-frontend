@@ -1,0 +1,26 @@
+import "../styles/Feed.css";
+
+function Feed() {
+    return (
+        <>
+            <section className="feed">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt id quasi tempore culpa. Eum assumenda hic quam nulla aliquam, facilis dignissimos molestiae cum illum asperiores reprehenderit! Dolore fuga maiores dolorum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, officiis. Assumenda in maxime deserunt itaque pariatur beatae accusamus explicabo atque quod eligendi earum aliquid molestiae laborum, hic temporibus nostrum? Neque?</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, animi aut facere non nisi quam, molestiae quae id dolorum hic praesentium quisquam magnam in qui ad ipsam aliquam architecto at!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nemo repudiandae unde animi molestias adipisci facere doloribus eveniet eaque cupiditate quo, ipsum, illo, at quas id sint totam nostrum recusandae?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore. laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime laboriosam nisi accusantium reiciendis ducimus totam, inventore eius laborum aspernatur aliquam quidem enim dolore earum. Maiores, commodi fuga? Minus, labore.</p>
+
+            </section>
+        </>
+    )
+}
+
+export default Feed;

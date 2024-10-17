@@ -1,0 +1,11 @@
+.main-content {
+    padding: 20px;
+    /* background-color: #f4f4f4; */
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.main-content h1, .main-content p {
+    margin-bottom: 35px;
+}
+
